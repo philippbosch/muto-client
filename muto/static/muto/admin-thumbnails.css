@@ -1,0 +1,24 @@
+.muto-thumb {
+     position: relative;
+     background: #eee;
+}
+
+.muto-thumb img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     max-width: 100%;
+     max-height: 100%;
+     margin: auto;
+}
+
+a.remove {
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+a.remove:hover {
+    opacity: 1;
+}
