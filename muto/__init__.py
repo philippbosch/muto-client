@@ -16,9 +16,13 @@ class Transformer(object):
     def register(self, model, field, build_filter=None):
         def add_to_queue(sender, instance, field, **kwargs):
             payload = dict(
+                model=str(model._meta),
+                pk=instance.pk,
+                field=field,
                 bucket=getattr(settings, 'MUTO_AWS_STORAGE_BUCKET_NAME', getattr(settings, 'AWS_STORAGE_BUCKET_NAME')),
                 key=str(getattr(instance, field)),
-                versions=[]
+                versions=[],
+                callback_url=getattr(settings, 'MUTO_CALLBACK_URL', None),
             )
 
             if callable(build_filter):
