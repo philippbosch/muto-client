@@ -1,1 +1,1 @@
-[{"pk": 1, "model": "muto.imageversiondefinition", "fields": {"identifier": "admin_thumb", "options": "{\"size\":\"100x100\"}", "user": null, "description": "Thumbnail for admin views"}}]
+[{"pk": 1, "model": "muto.imageversiondefinition", "fields": {"identifier": "admin_thumb", "options": "{\"size\":[100,100]}", "user": null, "description": "Thumbnail for admin views"}}]
