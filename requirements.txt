@@ -1,0 +1,5 @@
+Django>=1.5.0
+boto>=2.25.0
+easy-thumbnails>=1.4
+jsonfield>=0.9.20
+redis>=2.9.1
