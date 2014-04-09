@@ -1,9 +1,10 @@
 import json
-import redis
+from urllib import quote
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.functional import curry
+import redis
 from .models import ImageVersionDefinition
 
 
@@ -63,7 +64,7 @@ class Transformer(object):
 
         return "http://{bucket}.s3.amazonaws.com/{key}".format(**dict(
             bucket=settings.AWS_STORAGE_BUCKET_NAME,
-            key=version_key,
+            key=quote(version_key),
         ))
 
 
