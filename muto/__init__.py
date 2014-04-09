@@ -58,7 +58,7 @@ class Transformer(object):
         return version
 
     def build_url(self, key, identifier):
-        key_base, key_ext = key.rsplit('.')
+        key_base, key_ext = key.rsplit('.', 1)
         version_key = u'{0}.{1}.{2}'.format(key_base, identifier, key_ext)
 
         return "http://{bucket}.s3.amazonaws.com/{key}".format(**dict(
