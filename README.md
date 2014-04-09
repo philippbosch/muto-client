@@ -67,6 +67,7 @@ Use `MutoField` in your models (in **models.py**):
 
 ```python
 from django.db import models
+from muto import transformer
 from muto.fields import MutoField
 
 class MyModel(models.Model):
